@@ -1,6 +1,22 @@
+/* Global */
+
+body {
+  color: #333;
+}
+
+main {
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
 header {
   display: flex;
+  margin: 0px 21px;
   justify-content: space-between;
+  margin-bottom: 50px;
+  align-items: center;
 }
 
 header a {
@@ -8,6 +24,47 @@ header a {
   color: inherit;
 }
 
-header.a logo {
+header a.logo {
   font-weight: bold;
+  font-size: 2.5rem;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+/* Content */
+.content-wrapper {
+  display: flex;
+}
+.entry-wrap {
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+.entry {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.entry-text-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.entry img {
+  max-width: 50%;
+}
+
+/* Sidebar */
+.sidebar {
+  min-width: 300px;
+
+  padding-left: 20px;
+}
+/* Hide Sidebar on mobile */
+@media only screen and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
 }
