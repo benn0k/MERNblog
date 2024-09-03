@@ -1,38 +1,34 @@
+//CSS
 import "./App.css";
-import Header from "./components/Header";
-import Post from "./components/Post";
+
+//Lib
 import { Routes, Route } from "react-router-dom";
+
+//Components
+import Layout from "./Layout";
+import Index from "./Pages/Index";
+import Sidebar from "./components/Sidebar";
+import LoginPage from "./Pages/LoginPage";
+import RegisterPage from "./Pages/RegisterPage";
 
 function App() {
   return (
     <Routes>
-      <Route
-        index
-        element={
-          <main>
-            <Header />
+      <Route path="/" element={<Layout />}>
+        <Route
+          index
+          element={
             <div className="homepage-wrap">
               <div className="content-wrapper">
-                <Post />
-                <Post />
-                <Post />
+                <Index />
               </div>
-              <div className="sidebar">
-                <img src="https://tpc.googlesyndication.com/simgad/13004029155576538860"></img>
-              </div>
+              <Sidebar />
             </div>
-          </main>
-        }
-      />
-      <Route
-        path={`/login`}
-        element={
-          <main>
-            <Header />
-            <div>login</div>{" "}
-          </main>
-        }
-      />
+          }
+        />
+        <Route path={`/login`} element={<LoginPage />} />
+        <Route path={`/register`} element={<RegisterPage />} />
+      </Route>
     </Routes>
   );
 }

@@ -1,4 +1,7 @@
 /* Global */
+* {
+  box-sizing: border-box;
+}
 
 body {
   color: #333;
@@ -87,4 +90,36 @@ header nav {
   .content-wrapper {
     margin: 0 auto;
   }
+}
+
+/* Login */ /* Register */
+form.login,
+form.register {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 10px;
+  border: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+form h1 {
+  text-align: center;
 }
