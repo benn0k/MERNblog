@@ -13,7 +13,7 @@ main {
 /* Header */
 header {
   display: flex;
-  margin: 0px 21px;
+  margin: 0px 0px;
   justify-content: space-between;
   margin-bottom: 50px;
   align-items: center;
@@ -36,10 +36,12 @@ header nav {
 /* Content */
 .content-wrapper {
   display: flex;
-}
-.entry-wrap {
+  flex-direction: column;
   max-width: 730px;
-  margin: 0 auto;
+}
+.homepage-wrap {
+  display: flex;
+  gap: 20px;
 }
 
 .entry {
@@ -52,19 +54,37 @@ header nav {
   display: flex;
   flex-wrap: wrap;
 }
+.entry-text-content p,
+.entry-text-content h2 {
+  margin: 0.5rem 0px;
+}
+
 .entry img {
   max-width: 50%;
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: #888;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.author {
+  color: #333;
 }
 
 /* Sidebar */
 .sidebar {
-  min-width: 300px;
-
+  max-width: 300px;
   padding-left: 20px;
 }
 /* Hide Sidebar on mobile */
 @media only screen and (max-width: 1024px) {
   .sidebar {
     display: none;
+  }
+  .content-wrapper {
+    margin: 0 auto;
   }
 }
